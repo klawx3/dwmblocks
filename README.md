@@ -3,6 +3,11 @@ Modular status bar for dwm written in c.
 # usage
 To use dwmblocks first run 'make' and then install it with 'sudo make install'.
 After that you can put dwmblocks in your xinitrc or other startup script to have it start with dwm.
+## signaling changes
+For example, the audio module has the update signal 10 by default. Thus, running `pkill -RTMIN+10 dwmblocks` will update it.
+
+You can also run `kill -44 $(pidof dwmblocks)` which will have the same effect, but is faster. Just add 34 to your typical signal number.
+
 # modifying blocks
 The statusbar is made from text output from commandline programs.
 Blocks are added and removed by editing the blocks.h header file.
